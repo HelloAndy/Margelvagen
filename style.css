@@ -49,11 +49,13 @@ h6 {
 .info-box h3 {
     margin-top: 0;
     margin-bottom: 16px;
+    font-size: 1.5rem;
 }
 
 .info-box p {
     margin-top: 0;
     margin-bottom: 16px;
+    font-size: 1rem;
 }
 
 .info-box p:last-child {
@@ -104,4 +106,16 @@ h1 img {
         white-space: nowrap;
     }
 
+    .info-box h3 {
+        font-size: 1.25rem; /* ca 20px */
+    }
+
+    .info-box p {
+        font-size: 0.9rem;  /* ca 14-15px */
+        line-height: 1.5;
+    }
+
+    .info-box {
+        padding: 16px 20px; /* mindre padding på mobil */
+    }
 }
