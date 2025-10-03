@@ -27,10 +27,8 @@ h6 {
 
 .container {
     max-width: 1820px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 20px;
-    padding-right: 20px;
+    margin: 0 auto 100px;
+    padding: 0 20px;
     box-sizing: border-box;
 }
 
@@ -38,6 +36,28 @@ h6 {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     gap: 20px;
+}
+
+.info-box {
+    background: #f4f5e8;
+    border-top: 8px solid var(--header-color);
+    border-radius: 0 0 8px 8px;
+    padding: 24px 28px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+}
+
+.info-box h3 {
+    margin-top: 0;
+    margin-bottom: 16px;
+}
+
+.info-box p {
+    margin-top: 0;
+    margin-bottom: 16px;
+}
+
+.info-box p:last-child {
+    margin-bottom: 0;
 }
 
 .environmentimage {
@@ -78,4 +98,10 @@ h1 img {
     .grid > * {
         grid-column: 1 / -1 !important;
     }
+
+    .intro-heading {
+        font-size: 1.4rem;
+        white-space: nowrap;
+    }
+
 }
