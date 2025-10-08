@@ -230,6 +230,10 @@ a[target="_blank"]::after {
         white-space: nowrap;
     }
 
+    h3 {
+        font-size: 1.125rem;
+    }
+
     .info-box h4 {
         font-size: 1.25rem; /* ca 20px */
     }
