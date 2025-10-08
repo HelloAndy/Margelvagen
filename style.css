@@ -3,11 +3,16 @@ html {
 }
 
 :root {
-    --primary-color: #7b6b3c;
-    --primary-color: #6d5a5c;
-    --primary-color: #7e5a6d;
-    --primary-color: #a67c48;
     --primary-color: #646b3c;
+}
+
+:root,
+body,
+footer,
+.logo path,
+a,
+h1,h2,h3 {
+    transition: color 300ms ease, background-color 300ms ease, fill 300ms ease;
 }
 
 body {
@@ -100,8 +105,61 @@ em {
     opacity: 0.5;
 }
 
+footer {
+    min-height: 400px;
+    background: var(--primary-color);
+    display: flex;
+    align-items: center;
+    background: var(--primary-color);
+    color: #fff;
+}
+
 .logo path {
     fill: var(--primary-color)
+}
+
+/* Color switcher UI */
+.color-switcher {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 12px;
+}
+
+.color-swatch {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, .6);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+    cursor: pointer;
+    padding: 0;
+    background-clip: padding-box;
+}
+
+.color-swatch.selected {
+    outline: 1px solid rgba(255,255,255,1);
+    transform: scale(1.05);
+}
+
+.footer-content {
+    display: flex;
+    align-items: center; 
+    justify-content: space-between; 
+    gap: 24px;
+    max-width: 1820px;
+    margin: 0 auto;
+    padding: 40px 100px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.footer-content img {
+    max-width: 400px;
+    height: auto;
+    display: block;
+    opacity: .75;
 }
 
 .container {
@@ -235,11 +293,11 @@ a[target="_blank"]::after {
     }
 
     .info-box h4 {
-        font-size: 1.25rem; /* ca 20px */
+        font-size: 1.25rem; 
     }
 
     .info-box p {
-        font-size: 0.9rem;  /* ca 14-15px */
+        font-size: 0.9rem;  
         line-height: 1.5;
     }
 
@@ -250,6 +308,27 @@ a[target="_blank"]::after {
     .divider {
         border-bottom: 2px solid var(--primary-color);
         margin-bottom: 30px;        
+    }
+
+    footer {
+        min-height: auto;
+        padding: 24px 0;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .footer-content img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .color-switcher {
+        display: none;
     }
 
 }
